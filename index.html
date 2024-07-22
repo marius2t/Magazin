@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="ro-RO" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+
+                function ceas() {
+                    var Digital = new Date()
+                    var hours = Digital.getHours()     
+                    var minutes = Digital.getMinutes() 
+                    var seconds = Digital.getSeconds() 
+                    var dn = " "
+           
+              
+                    if (hours == 0)
+                        hours = 12
+                    if (minutes <= 9)
+                        minutes = "0" + minutes
+                    if (seconds <= 9)
+                        seconds = "0" + seconds
+        
+            
+                    myclock = "<font size='5' face='Arial' ><b><br>" + hours + ":" + minutes + ":"
+                        + seconds + " " + dn + "</b></font>"
+        
+                    document.getElementById("ceas2").innerHTML = myclock
+                    setTimeout("ceas()", 1000)     
+                }
+                window.onload = ceas;    
+                
+            </script>
+    <title>MAGAZIN PAPA</title>
+    <link rel="stylesheet" href="stil.css">
+    <script defer src="java.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PAPA BUNĂ</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Acasă</a></li>
+                <li><a href="#products">Produse</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Coș de Cumpărături</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Căutați produse...">
+            <button id="search-button"> <img src="icon-search.svg" class="SearchSubmitImage" alt="Caută de papa aici" width="25" height="25" /></button>
+        </div>
+    </button>
+    <button id="add" <a href="#" class="TriggerButton MenuTrigger" > 
+        <img src="icon-cart.svg" alt="Vezi coșul de cumpărături" class="TiggerImage MenuTriggerImage" width="44" height="44" />
+        </a>
+    </button>
+    </header>
+
+    <section id="home">
+        <h2>Bine ați venit la Magazinul de papa</h2>
+        <p>Aici găsiți cele mai bune produse la cele mai bune prețuri.</p>
+    </section>
+
+    <section id="products">
+        <h2>Produsele Noastre</h2>
+        <div class="product" data-name="Produs 1" data-price="100">
+            <h3>JOE</h3>
+            <img src="joe.jpeg" alt="Produs 1">
+            <p>NAPOLITANE JOE</p>
+            <p>Preț: VARIABIL LEI</p>
+            <button class="add-to-cart">Adaugă în coș</button>
+        </div>
+        <div class="product" data-name="Produs 2" data-price="100">
+            <h3>NAPOLITANE KNOPPERS</h3>
+            <img src="img\knop.jpeg" alt="Produs 2">
+            <p>NAPOLITANE KNOPPERS</p>
+            <p>Preț: VARIABIL LEI</p>
+            <button class="add-to-cart">Adaugă în coș</button>
+        </div>
+        <div class="product" data-name="Produs 2" data-price="100">
+            <h3>ALUNE</h3>
+            <img src="alune.jpeg" alt="Produs 2">
+            <img src="alune2.jpeg" alt="Produs 2">
+            <p>ALUNE</p>
+            <p>Preț: VARIABIL LEI</p>
+            <button class="add-to-cart">Adaugă în coș</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Coș de Cumpărături</h2>
+        <ul id="cart-items"></ul>
+        <button id="clear-cart">Golește Coșul</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="#">
+            <label for="name">Nume:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Trimite</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Magazin Online. Toate drepturile rezervate.</p>
+    </footer>
+</body>
+</html>
